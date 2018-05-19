@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.sairajen.videostatus"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [onesignal_app_id: "04a4f8ce-12e4-4b51-a48a-82387a534aef",
+                                onesignal_google_project_number: "962269508877"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    implementation 'com.google.android.gms:play-services-ads:12.0.1'
+    implementation 'com.onesignal:OneSignal:3.8.3'
+
+}

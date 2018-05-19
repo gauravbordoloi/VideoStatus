@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Video Status</string>
+
+    <string name="ad_id">ca-app-pub-3883357351890782~8544585185</string>
+    <string name="banner">ca-app-pub-3883357351890782/9725928620</string>
+    <string name="interstitial">ca-app-pub-3883357351890782/2202661826</string>
+
+</resources>
